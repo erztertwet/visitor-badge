@@ -18,25 +18,29 @@ async function generateNewKey() {
 
 export default async function handler(req, res) {
     try {
-    const key = await generateNewKey();
+        if (req.method !== "POST") {
+            return res.status(405).json({ error: "Method Not Allowed" });
+        }
 
-    await redis.set(`counter:${key}`, 0);
+        const key = await generateNewKey();
 
-    const baseUrl = process.env.BASE_URL ;
+        await redis.set(`counter:${key}`, 0);
 
-    let body = req.body;
-    if (typeof body === "string") {
-        body = JSON.parse(body);
-    }
+        const baseUrl = process.env.BASE_URL ;
 
-    const { style = "flat", color = "blue", labelColor = "grey" } = body;
-    const badgeUrl = `${baseUrl}/api/badge/${key}?style=${style}&color=${color}&labelColor=${labelColor}`;
-    const markdown = `![Visits](${badgeUrl})`;
+        let body = req.body;
+        if (typeof body === "string") {
+            body = JSON.parse(body);
+        }
 
-    res.status(200).json({
-        badgeUrl,
-        markdown,
-    });
+        const { style = "flat", color = "blue", labelColor = "grey" } = body;
+        const badgeUrl = `${baseUrl}/api/badge/${key}?style=${style}&color=${color}&labelColor=${labelColor}`;
+        const markdown = `![Visits](${badgeUrl})`;
+
+        res.status(200).json({
+            badgeUrl,
+            markdown,
+        });
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
     }

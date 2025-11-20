@@ -1,17 +1,6 @@
-import Redis from 'ioredis';
+import { Redis } from '@upstash/redis';
 
-const redis = new Redis({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
-    username: "default",
-    password: process.env.REDIS_PASSWORD,
-    maxRetriesPerRequest: 1,
-    enableOfflineQueue: false,
-    connectTimeout: 10000,
-    retryStrategy: (times) => {
-        const delay = Math.min(times * 50, 2000);
-        return delay;
-    }
-});
+const redis = Redis.fromEnv();
+
 
 export default redis;

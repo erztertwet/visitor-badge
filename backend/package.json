@@ -5,6 +5,7 @@
   "type": "module",
   "dependencies": {
     "ioredis": "^5.8.2",
-    "badge-maker": "^3.3.0"
+    "badge-maker": "^3.3.0",
+    "@upstash/redis": "^1.35.6"
   }
 }

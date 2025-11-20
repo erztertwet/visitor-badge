@@ -1,5 +1,4 @@
 import Redis from 'ioredis';
-import { lazy } from 'react';
 
 const redis = new Redis({
     host: process.env.REDIS_HOST,

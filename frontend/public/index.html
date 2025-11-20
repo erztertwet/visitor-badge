@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Badge Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Visitor Badge Generator</h1>
+  <label>Style:
+    <select id="style">
+      <option value="flat">flat</option>
+      <option value="flat-square">flat-square</option>
+      <option value="plastic">plastic</option>
+      <option value="for-the-badge">for-the-badge</option>
+    </select>
+    <div id="examples-section">
+      <div style="display: flex; gap: 24px; justify-content: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <img src="https://img.shields.io/badge/flat-42-FFD700?style=flat&labelColor=000000" /><br>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <img src="https://img.shields.io/badge/flatsquare-42-FFD700?style=flat-square&labelColor=000000" /><br>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <img src="https://img.shields.io/badge/plastic-42-FFD700?style=plastic&labelColor=000000" /><br>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <img src="https://img.shields.io/badge/forthebadge-42-FFD700?style=for-the-badge&labelColor=000000" /><br>
+        </div>
+      </div>
+    </div>
+  </label>
+
+  <label>Counter background color
+    <input type="color" id="color" value="#4c1">
+  </label>
+
+  <label>Visits background color
+    <input type="color" id="labelColor" value="#555">
+  </label>
+
+  <div id="preview-section">
+    <h3>Preview</h3>
+    <div id="badge"></div>
+    <button id="send-btn">Generate badge</button>
+  </div>
+
+  <div id="result-url-section" style="display:none;">
+    <h3>Badge URL</h3>
+    <div id="badge-url"></div>
+  </div>
+  <div id="result-link-section" style="display:none;">
+    <h3>Badge Markdown Link</h3>
+    <div id="badge-link"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

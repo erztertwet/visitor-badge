@@ -5,7 +5,6 @@ const redis = new Redis({
     port: process.env.REDIS_PORT,
     username: "default",
     password: process.env.REDIS_PASSWORD,
-    tls: {}
 });
 
 export default redis;

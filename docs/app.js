@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorValue = color.value.replace('#', '');
     const labelColorValue = labelColor.value.replace('#', '');
 
-    fetch('https://visitor-badge-self.vercel.app/api/new-badge', {
+    fetch('https://visitorbadge.vercel.app/api/new-badge', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

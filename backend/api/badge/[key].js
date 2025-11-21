@@ -20,18 +20,13 @@ export default async function handler(req, res) {
 
     try {
         const counter = await redis.incr(`counter:${key}`);
-        const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M10 50 Q50 10 90 50 Q50 90 10 50 Z" stroke="#ffffff" stroke-width="5" fill="none"/>
-  <circle cx="50" cy="50" r="12" fill="#ffffff"/>
-</svg>`;
-        const logoSvgBase64 = Buffer.from(logoSvg).toString('base64');
         svg = makeBadge({
             label: "visitors",
             message: counter.toString(),
             color,
             labelColor,
             style,
-            logoBase64: `data:image/svg+xml;base64,${logoSvgBase64}`,
+            logoBase64: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTAgNTAgUTUwIDEwIDkwIDUwIFE1MCA5MCAxMCA1MCBaIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEyIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+`,
         });
 
         res.setHeader("Content-Type", "image/svg+xml");

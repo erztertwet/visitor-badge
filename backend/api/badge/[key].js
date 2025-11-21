@@ -26,7 +26,6 @@ export default async function handler(req, res) {
             color,
             labelColor,
             style,
-            logoBase64: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAxMiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIj48cGF0aCBkPSJNMS4yIDZxNC44IC00LjggOS42IDAgLTQuOCA0LjggLTkuNiAwWiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjAuNiIgZmlsbD0ibm9uZSIvPjxwYXRoIGN4PSI1MCIgY3k9IjUwIiByPSIxMiIgZmlsbD0iI2ZmZmZmZiIgZD0iTTcuNDQgNkExLjQ0IDEuNDQgMCAwIDEgNiA3LjQ0QTEuNDQgMS40NCAwIDAgMSA0LjU2IDZBMS40NCAxLjQ0IDAgMCAxIDcuNDQgNnoiLz48L3N2Zz4=`,
         });
 
         res.setHeader("Content-Type", "image/svg+xml");
@@ -34,7 +33,7 @@ export default async function handler(req, res) {
     } catch (error) {
         svg = makeBadge({
             label: "error",
-            message: error.message ||"internal error",
+            message: "internal error",
             color: "red",
             labelColor,
             style

